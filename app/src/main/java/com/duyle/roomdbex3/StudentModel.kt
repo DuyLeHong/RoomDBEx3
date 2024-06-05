@@ -11,4 +11,11 @@ data class StudentModel(
     @ColumnInfo(name = "mssv") var mssv: String?,
     @ColumnInfo(name = "diemTB") var diemTB: Float?,
     @ColumnInfo(name = "daratruong") var daratruong: Boolean?
-)
+) {
+    fun getThongtin(): String {
+        return "Ho ten: $hoten \n" +
+                "MSSV: $mssv \n" +
+                "Diem trung binh: $diemTB \n" +
+                "Da ra truong: $daratruong"
+    }
+}
